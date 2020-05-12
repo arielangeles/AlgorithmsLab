@@ -65,7 +65,7 @@ namespace Tp1
                 {
                     Console.Write($"Inserte el numero {i + 1}: ");
                     bool isInt = int.TryParse(Console.ReadLine(), out int val);
-                    //int val = int.Parse(Console.ReadLine());
+                   
                     if (val >= y && isInt)
                     {
                         array[i] += val;
