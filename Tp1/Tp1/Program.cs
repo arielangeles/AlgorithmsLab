@@ -9,26 +9,26 @@ namespace Tp1
         static void Main(string[] args)
         {
 
+            //#region //TP1A
+            //Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
+            //Console.WriteLine("====================================================");
 
-            #region //TP1A
-            Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
-            Console.WriteLine("====================================================");
+            //int[] arr1 = GetArr(1);
+            //Console.WriteLine();
+            //int[] arr2 = GetArr(2);
 
-            int[] arr1 = GetArr(1);
-            Console.WriteLine();
-            int[] arr2 = GetArr(2);
+            //// Ejemplos
+            ////int[] arr1 = { 1, 2, 4, 6, 19, 23, 25 };
+            ////int[] arr2 = { 3, 5, 7, 8, 9 };
 
-            // Ejemplos
-            //int[] arr1 = { 1, 2, 4, 6, 19, 23, 25 };
-            //int[] arr2 = { 3, 5, 7, 8, 9 };
+            //Console.Clear();
+            //TP11 merger = new TP11();
 
-            Console.Clear();
-            TP11 merger = new TP11();
+            //int[] mergedArray = merger.Merge(arr1, arr2);
 
-            int[] mergedArray = merger.Merge(arr1, arr2);
+            //PrintArr(mergedArray);
 
-            PrintArr(mergedArray);
-
+            #region Metodos
             // Metodos
             int[] GetArr(int x)
             {
@@ -87,24 +87,26 @@ namespace Tp1
                 return array;
             }
 
-            void PrintArr(int[] mergedArray)
-            {
-                Console.WriteLine($"Arreglo 1:\n [{string.Join(", ", arr1)}]");
-                Console.WriteLine($"Arreglo 2:\n [{string.Join(", ", arr2)}]");
+            //void PrintArr(int[] mergedArray)
+            //{
+            //    Console.WriteLine($"Arreglo 1:\n [{string.Join(", ", arr1)}]");
+            //    Console.WriteLine($"Arreglo 2:\n [{string.Join(", ", arr2)}]");
 
-                Console.WriteLine($"\nArreglo ordenado:\n [{string.Join(", ", mergedArray)}]");
-            }
+            //    Console.WriteLine($"\nArreglo ordenado:\n [{string.Join(", ", mergedArray)}]");
+            //}
+            #endregion 
 
-
-            #endregion
+            //#endregion
 
             #region //TP1B
             Console.WriteLine("\nEmparejando tuercas y tornillos");
             Console.WriteLine("====================================================");
-            char[] tuercas = { '@', '>', '%', '_', '!', '-' };
 
-            char[] tornillos = { '%', '_', '!','-', '@', '>' };
-
+            //Ejemplos
+            //char[] tuercas = { '@', '>', '%', '_', '!', '-' };
+            //char[] tornillos = { '%', '_', '!', '-', '@', '>' };
+            char[] tuercas = GetCharArr(1);
+            char[] tornillos = GetCharArr(2);
 
             TP12 matching = new TP12();
 
@@ -118,6 +120,59 @@ namespace Tp1
             Console.WriteLine("\nTuercas y Tornillos matched: ");
             Console.WriteLine(string.Join(" ", tuercas));
             Console.WriteLine(string.Join(" ", tornillos));
+
+
+            #region Metodos
+            // Metodos
+            char[] GetCharArr(int x)
+            {
+                bool isRight = false;
+                do
+                {
+                    Console.Write($"\nTamaño del arreglo {x}: ");
+                    bool isChar = int.TryParse(Console.ReadLine(), out int n);
+
+                    if (isChar)
+                    {
+                        char[] array = CreateCharArr(n);
+                        isRight = true;
+                        return array;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Introduzca un numero valido");
+                        Console.WriteLine();
+                    }
+
+                } while (!isRight);
+
+                return null;
+
+            }
+
+            char[] CreateCharArr(int size)
+            {
+                char[] array = new char[size];
+
+                
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write($"Inserte el caracter {i + 1}: ");
+                    bool isChar = char.TryParse(Console.ReadLine(), out char val);
+
+                    array[i] = val;
+
+                    if (!isChar)
+                    { 
+                        Console.WriteLine("\nIntroduzca un char valido");
+                        i--;
+                    }
+
+                }
+
+                return array;
+            }
+            #endregion 
 
             #endregion
 
