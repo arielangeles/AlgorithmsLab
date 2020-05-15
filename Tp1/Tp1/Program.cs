@@ -160,10 +160,11 @@ namespace Tp1
                     Console.Write($"Inserte el caracter {i + 1}: ");
                     bool isChar = char.TryParse(Console.ReadLine(), out char val);
 
-                    array[i] = val;
-
-                    if (!isChar)
-                    { 
+                    if (isChar)
+                    {
+                        array[i] = val;
+                    }
+                    else {                    
                         Console.WriteLine("\nIntroduzca un char valido");
                         i--;
                     }
