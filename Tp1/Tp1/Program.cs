@@ -9,24 +9,24 @@ namespace Tp1
         static void Main(string[] args)
         {
 
-            //#region //TP1A
-            //Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
-            //Console.WriteLine("====================================================");
+            #region //TP1A
+            Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
+            Console.WriteLine("====================================================");
 
-            //int[] arr1 = GetArr(1);
-            //Console.WriteLine();
-            //int[] arr2 = GetArr(2);
+            int[] arr1 = GetArr(1);
+            Console.WriteLine();
+            int[] arr2 = GetArr(2);
 
-            //// Ejemplos
-            ////int[] arr1 = { 1, 2, 4, 6, 19, 23, 25 };
-            ////int[] arr2 = { 3, 5, 7, 8, 9 };
+            // Ejemplos
+            //int[] arr1 = { 1, 2, 4, 6, 19, 23, 25 };
+            //int[] arr2 = { 3, 5, 7, 8, 9 };
 
-            //Console.Clear();
-            //TP11 merger = new TP11();
+            Console.Clear();
+            TP11 merger = new TP11();
 
-            //int[] mergedArray = merger.Merge(arr1, arr2);
+            int[] mergedArray = merger.Merge(arr1, arr2);
 
-            //PrintArr(mergedArray);
+            PrintArr(mergedArray);
 
             #region Metodos
             // Metodos
@@ -87,16 +87,16 @@ namespace Tp1
                 return array;
             }
 
-            //void PrintArr(int[] mergedArray)
-            //{
-            //    Console.WriteLine($"Arreglo 1:\n [{string.Join(", ", arr1)}]");
-            //    Console.WriteLine($"Arreglo 2:\n [{string.Join(", ", arr2)}]");
+            void PrintArr(int[] mergedArray)
+            {
+                Console.WriteLine($"Arreglo 1:\n [{string.Join(", ", arr1)}]");
+                Console.WriteLine($"Arreglo 2:\n [{string.Join(", ", arr2)}]");
 
-            //    Console.WriteLine($"\nArreglo ordenado:\n [{string.Join(", ", mergedArray)}]");
-            //}
+                Console.WriteLine($"\nArreglo ordenado:\n [{string.Join(", ", mergedArray)}]");
+            }
             #endregion 
 
-            //#endregion
+            #endregion
 
             #region //TP1B
             Console.WriteLine("\nEmparejando tuercas y tornillos");
