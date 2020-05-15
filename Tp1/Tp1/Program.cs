@@ -8,7 +8,52 @@ namespace Tp1
     {
         static void Main(string[] args)
         {
+            bool keepGoing = true;
+            while (keepGoing)
+            {
+                Console.WriteLine("Practica #1");
+                Console.WriteLine("1. Uniendo dos arreglos ordenados de distintos tamaños");
+                Console.WriteLine("2. Emparejando tuercas y tornillos");
+                Console.WriteLine("3. Salir");
 
+                bool isInt = int.TryParse(Console.ReadLine(), out int val);
+
+                if (isInt && val > 0 && val < 4)
+                {
+                    switch (val)
+                    {
+                        case 1:
+                            TP1A();
+                            Console.WriteLine("Presione cualquier tecla para continuar");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        case 2:
+                            TP1B();
+                            Console.WriteLine("Presione cualquier tecla para continuar");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        case 3:
+                            keepGoing = false;
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("\nIntroduzca un valor valido");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+        }
+
+        static void TP1A()
+        {
             #region //TP1A
             Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
             Console.WriteLine("====================================================");
@@ -39,8 +84,8 @@ namespace Tp1
                     bool isInt = int.TryParse(Console.ReadLine(), out int n);
 
                     if (isInt)
-                    {                  
-                        int[]array = CreateArray(n);
+                    {
+                        int[] array = CreateArray(n);
                         isRight = true;
                         return array;
                     }
@@ -55,7 +100,7 @@ namespace Tp1
                 return null;
 
             }
-            
+
             int[] CreateArray(int size)
             {
                 int[] array = new int[size];
@@ -65,7 +110,7 @@ namespace Tp1
                 {
                     Console.Write($"Inserte el numero {i + 1}: ");
                     bool isInt = int.TryParse(Console.ReadLine(), out int val);
-                   
+
                     if (val >= y && isInt)
                     {
                         array[i] += val;
@@ -73,12 +118,12 @@ namespace Tp1
                     }
                     else
                     {
-                        if (!isInt) 
+                        if (!isInt)
                             Console.WriteLine("\nIntroduzca un numero valido");
 
-                        else if(val < y)
-                            Console.WriteLine($"\nInserte un numero mayor o igual a {y}"); 
-                        
+                        else if (val < y)
+                            Console.WriteLine($"\nInserte un numero mayor o igual a {y}");
+
                         i--;
                     }
 
@@ -98,6 +143,10 @@ namespace Tp1
 
             #endregion
 
+        }
+
+        static void TP1B()
+        {
             #region //TP1B
             Console.WriteLine("\nEmparejando tuercas y tornillos");
             Console.WriteLine("====================================================");
@@ -154,7 +203,7 @@ namespace Tp1
             {
                 char[] array = new char[size];
 
-                
+
                 for (int i = 0; i < array.Length; i++)
                 {
                     Console.Write($"Inserte el caracter {i + 1}: ");
@@ -164,7 +213,8 @@ namespace Tp1
                     {
                         array[i] = val;
                     }
-                    else {                    
+                    else
+                    {
                         Console.WriteLine("\nIntroduzca un char valido");
                         i--;
                     }
@@ -176,8 +226,9 @@ namespace Tp1
             #endregion 
 
             #endregion
-
         }
+
+
 
     }
 
