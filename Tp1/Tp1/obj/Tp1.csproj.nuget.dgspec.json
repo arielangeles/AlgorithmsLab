@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cesar\\Desktop\\New folder\\Tp1\\Tp1\\Tp1.csproj": {}
+    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cesar\\Desktop\\New folder\\Tp1\\Tp1\\Tp1.csproj": {
+    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cesar\\Desktop\\New folder\\Tp1\\Tp1\\Tp1.csproj",
+        "projectUniqueName": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj",
         "projectName": "Tp1",
-        "projectPath": "C:\\Users\\cesar\\Desktop\\New folder\\Tp1\\Tp1\\Tp1.csproj",
-        "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cesar\\Desktop\\New folder\\Tp1\\Tp1\\obj\\",
+        "projectPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj",
+        "packagesPath": "C:\\Users\\kelvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kelvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

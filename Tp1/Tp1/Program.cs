@@ -55,6 +55,7 @@ namespace Tp1
         static void TP1A()
         {
             #region //TP1A
+            Console.Clear();
             Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
             Console.WriteLine("====================================================");
 
@@ -148,6 +149,7 @@ namespace Tp1
         static void TP1B()
         {
             #region //TP1B
+            Console.Clear();
             Console.WriteLine("\nEmparejando tuercas y tornillos");
             Console.WriteLine("====================================================");
 
