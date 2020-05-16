@@ -172,7 +172,7 @@ namespace Tp1
                 if (isNumber && n > 0)
                 {
                     Console.WriteLine("Tuercas: ");
-                    char[] tuercas = GetCharArr(n);
+                    char[] tuercas = CreateCharArr(n);
 
                     Console.WriteLine("\nTornillos: ");
                     char[] tornillos = MakeSureCharArrIsEqual(tuercas);
@@ -204,21 +204,6 @@ namespace Tp1
 
             #region Metodos
             // Metodos
-            char[] GetCharArr(int x)
-            {
-                bool isRight = false;
-                do
-                {
-
-                    int n = x;
-                    char[] array = CreateCharArr(n);
-                    isRight = true;
-                    return array;
-                    
-
-                } while (!isRight);
-
-            }
 
             char[] MakeSureCharArrIsEqual(char[] tuercas)
             {
