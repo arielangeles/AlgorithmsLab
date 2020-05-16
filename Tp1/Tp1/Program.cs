@@ -24,13 +24,13 @@ namespace Tp1
                     {
                         case 1:
                             TP1A();
-                            Console.WriteLine("Presione cualquier tecla para continuar");
+                            Console.WriteLine("\nPresione cualquier tecla para continuar");
                             Console.ReadKey();
                             Console.Clear();
                             break;
                         case 2:
                             TP1B();
-                            Console.WriteLine("Presione cualquier tecla para continuar");
+                            Console.WriteLine("\nPresione cualquier tecla para continuar");
                             Console.ReadKey();
                             Console.Clear();
                             break;
