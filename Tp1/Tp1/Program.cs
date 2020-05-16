@@ -149,6 +149,8 @@ namespace Tp1
         static void TP1B()
         {
             #region //TP1B
+            
+
             Console.Clear();
             Console.WriteLine("\nEmparejando tuercas y tornillos");
             Console.WriteLine("====================================================");
@@ -156,74 +158,92 @@ namespace Tp1
             //Ejemplos
             //char[] tuercas = { '@', '>', '%', '_', '!', '-' };
             //char[] tornillos = { '%', '_', '!', '-', '@', '>' };
-            char[] tuercas = GetCharArr(1);
-            char[] tornillos = GetCharArr(2);
 
-            TP12 matching = new TP12();
+            bool okay = false;
+            do
+            {
+                Console.Write($"\nIngrese el tamaño de los arreglos: ");
+                string number = Console.ReadLine();
+                Console.WriteLine();
 
-            //Before match
-            Console.WriteLine($"Tuercas: {string.Join(" ", tuercas)}");
-            Console.WriteLine($"Tornillos: {string.Join(" ", tornillos)}");
 
-            matching.MatchPairs(tuercas, tornillos, 0, tornillos.Length - 1);
+                bool isNumber = int.TryParse(number, out int n);
 
-            //After match
-            Console.WriteLine("\nTuercas y Tornillos matched: ");
-            Console.WriteLine(string.Join(" ", tuercas));
-            Console.WriteLine(string.Join(" ", tornillos));
+                if (isNumber && n > 0)
+                {
+                    Console.WriteLine("Tuercas: ");
+                    char[] tuercas = GetCharArr(number);
+
+                    Console.WriteLine("\nTornillos: ");
+                    char[] tornillos = GetCharArr(number);
+
+
+                    TP12 matching = new TP12();
+
+                    //Before match
+                    Console.WriteLine($"\nTuercas: {string.Join(" ", tuercas)}");
+                    Console.WriteLine($"Tornillos: {string.Join(" ", tornillos)}");
+
+                    matching.MatchPairs(tuercas, tornillos, 0, tornillos.Length - 1);
+
+                    //After match
+                    Console.WriteLine("\nTuercas y Tornillos matched: ");
+                    Console.WriteLine(string.Join(" ", tuercas));
+                    Console.WriteLine(string.Join(" ", tornillos));
+                    okay = true;
+                }
+                else
+                {
+                    Console.WriteLine("Introduzca un numero valido");
+                    Console.WriteLine();
+                }
+            }while (!okay);
+
 
 
             #region Metodos
             // Metodos
-            char[] GetCharArr(int x)
+            char[] GetCharArr(string x)
             {
                 bool isRight = false;
                 do
                 {
-                    Console.Write($"\nTamaño del arreglo {x}: ");
-                    bool isChar = int.TryParse(Console.ReadLine(), out int n);
 
-                    if (isChar)
-                    {
-                        char[] array = CreateCharArr(n);
-                        isRight = true;
-                        return array;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Introduzca un numero valido");
-                        Console.WriteLine();
-                    }
+                    int n = int.Parse(x);
+                    char[] array = CreateCharArr(n);
+                    isRight = true;
+                    return array;
+                    
 
                 } while (!isRight);
-
-                return null;
 
             }
 
             char[] CreateCharArr(int size)
             {
-                char[] array = new char[size];
-
-
-                for (int i = 0; i < array.Length; i++)
+                if (size > 0)
                 {
-                    Console.Write($"Inserte el caracter {i + 1}: ");
-                    bool isChar = char.TryParse(Console.ReadLine(), out char val);
+                    char[] array = new char[size];
 
-                    if (isChar)
-                    {
-                        array[i] = val;
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nIntroduzca un char valido");
-                        i--;
-                    }
 
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        Console.Write($"Inserte el caracter {i + 1}: ");
+                        bool isChar = char.TryParse(Console.ReadLine(), out char val);
+
+                        if (isChar)
+                        {
+                            array[i] = val;
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nIntroduzca un char valido");
+                            i--;
+                        }                       
+                    }
+                    return array;
                 }
-
-                return array;
+                return null;
             }
             #endregion 
 

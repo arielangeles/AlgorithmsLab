@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj": {}
+    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj": {
+    "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj",
+        "projectUniqueName": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
         "projectName": "Tp1",
-        "projectPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\Tp1.csproj",
+        "projectPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
         "packagesPath": "C:\\Users\\kelvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab1\\Tp1\\Tp1\\obj\\",
+        "outputPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kelvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
