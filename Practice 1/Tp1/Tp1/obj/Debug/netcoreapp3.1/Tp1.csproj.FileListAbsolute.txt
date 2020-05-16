@@ -1,0 +1,61 @@
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.exe
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.deps.json
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.json
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.dev.json
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\ariel\source\repos\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\ariel\source\repos\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfoInputs.cache
+C:\Users\ariel\source\repos\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfo.cs
+C:\Users\ariel\source\repos\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\ariel\source\repos\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\ariel\source\repos\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csprojAssemblyReference.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.exe
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.deps.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.dev.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csprojAssemblyReference.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csproj.CoreCompileInputs.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfoInputs.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfo.cs
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\kelvi\Source\Repos\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.genruntimeconfig.cache
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.exe
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.deps.json
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.json
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.dev.json
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csprojAssemblyReference.cache
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csproj.CoreCompileInputs.cache
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfoInputs.cache
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfo.cs
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\cesar\Desktop\New folder\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.genruntimeconfig.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.exe
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.deps.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.dev.json
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csprojAssemblyReference.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csproj.CoreCompileInputs.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfoInputs.cache
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfo.cs
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\kelvi\Source\Repos\AlgorithmsLab1\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.genruntimeconfig.cache
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.exe
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.deps.json
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.json
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.runtimeconfig.dev.json
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\bin\Debug\netcoreapp3.1\Tp1.pdb
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.csprojAssemblyReference.cache
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfoInputs.cache
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.AssemblyInfo.cs
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.dll
+C:\Users\ariel\Documents\LabAlgorithms\AlgorithmsLab\Tp1\Tp1\obj\Debug\netcoreapp3.1\Tp1.pdb
