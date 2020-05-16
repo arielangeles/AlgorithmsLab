@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ariel\\source\\repos\\Tp1\\Tp1\\Tp1.csproj",
+      "projectUniqueName": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
       "projectName": "Tp1",
-      "projectPath": "C:\\Users\\ariel\\source\\repos\\Tp1\\Tp1\\Tp1.csproj",
+      "projectPath": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
       "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ariel\\source\\repos\\Tp1\\Tp1\\obj\\",
+      "outputPath": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",

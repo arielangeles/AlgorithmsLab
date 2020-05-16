@@ -8,9 +8,54 @@ namespace Tp1
     {
         static void Main(string[] args)
         {
+            bool keepGoing = true;
+            while (keepGoing)
+            {
+                Console.WriteLine("Practica #1");
+                Console.WriteLine("1. Uniendo dos arreglos ordenados de distintos tamaños");
+                Console.WriteLine("2. Emparejando tuercas y tornillos");
+                Console.WriteLine("3. Salir");
 
+                bool isInt = int.TryParse(Console.ReadLine(), out int val);
 
+                if (isInt && val > 0 && val < 4)
+                {
+                    switch (val)
+                    {
+                        case 1:
+                            TP1A();
+                            Console.WriteLine("\nPresione cualquier tecla para continuar");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        case 2:
+                            TP1B();
+                            Console.WriteLine("\nPresione cualquier tecla para continuar");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        case 3:
+                            keepGoing = false;
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("\nIntroduzca un valor valido");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+        }
+
+        static void TP1A()
+        {
             #region //TP1A
+            Console.Clear();
             Console.WriteLine("Uniendo dos arreglos ordenados de distintos tamaños");
             Console.WriteLine("====================================================");
 
@@ -29,6 +74,7 @@ namespace Tp1
 
             PrintArr(mergedArray);
 
+            #region Metodos
             // Metodos
             int[] GetArr(int x)
             {
@@ -39,8 +85,8 @@ namespace Tp1
                     bool isInt = int.TryParse(Console.ReadLine(), out int n);
 
                     if (isInt)
-                    {                  
-                        int[]array = CreateArray(n);
+                    {
+                        int[] array = CreateArray(n);
                         isRight = true;
                         return array;
                     }
@@ -55,7 +101,7 @@ namespace Tp1
                 return null;
 
             }
-            
+
             int[] CreateArray(int size)
             {
                 int[] array = new int[size];
@@ -65,7 +111,7 @@ namespace Tp1
                 {
                     Console.Write($"Inserte el numero {i + 1}: ");
                     bool isInt = int.TryParse(Console.ReadLine(), out int val);
-                   
+
                     if (val >= y && isInt)
                     {
                         array[i] += val;
@@ -73,12 +119,12 @@ namespace Tp1
                     }
                     else
                     {
-                        if (!isInt) 
+                        if (!isInt)
                             Console.WriteLine("\nIntroduzca un numero valido");
 
-                        else if(val < y)
-                            Console.WriteLine($"\nInserte un numero mayor o igual a {y}"); 
-                        
+                        else if (val < y)
+                            Console.WriteLine($"\nInserte un numero mayor o igual a {y}");
+
                         i--;
                     }
 
@@ -94,34 +140,132 @@ namespace Tp1
 
                 Console.WriteLine($"\nArreglo ordenado:\n [{string.Join(", ", mergedArray)}]");
             }
-
-
-            #endregion
-
-            #region //TP1B
-            Console.WriteLine("\nEmparejando tuercas y tornillos");
-            Console.WriteLine("====================================================");
-            char[] tuercas = { '@', '>', '%', '_', '!', '-' };
-
-            char[] tornillos = { '%', '_', '!','-', '@', '>' };
-
-
-            TP12 matching = new TP12();
-
-            //Before match
-            Console.WriteLine($"Tuercas: {string.Join(" ", tuercas)}");
-            Console.WriteLine($"Tornillos: {string.Join(" ", tornillos)}");
-
-            matching.MatchPairs(tuercas, tornillos, 0, tornillos.Length - 1);
-
-            //After match
-            Console.WriteLine("\nTuercas y Tornillos matched: ");
-            Console.WriteLine(string.Join(" ", tuercas));
-            Console.WriteLine(string.Join(" ", tornillos));
+            #endregion 
 
             #endregion
 
         }
+
+        static void TP1B()
+        {
+            #region //TP1B
+            
+
+            Console.Clear();
+            Console.WriteLine("\nEmparejando tuercas y tornillos");
+            Console.WriteLine("====================================================");
+
+            //Ejemplos
+            //char[] tuercas = { '@', '>', '%', '_', '!', '-' };
+            //char[] tornillos = { '%', '_', '!', '-', '@', '>' };
+
+            bool okay = false;
+            do
+            {
+                Console.Write($"\nIngrese el tamaño de los arreglos: ");
+                string number = Console.ReadLine();
+                Console.WriteLine();
+
+
+                bool isNumber = int.TryParse(number, out int n);
+
+                if (isNumber && n > 0)
+                {
+                    Console.WriteLine("Tuercas: ");
+                    char[] tuercas = CreateCharArr(n);
+
+                    Console.WriteLine("\nTornillos: ");
+                    char[] tornillos = MakeSureCharArrIsEqual(tuercas);
+
+
+                    TP12 matching = new TP12();
+
+                    //Before match
+                    Console.WriteLine($"\nTuercas: {string.Join(" ", tuercas)}");
+                    Console.WriteLine($"Tornillos: {string.Join(" ", tornillos)}");
+
+                    matching.MatchPairs(tuercas, tornillos, 0, tornillos.Length - 1);
+
+                    //After match
+                    Console.WriteLine("\nTuercas y Tornillos matched: ");
+                    Console.WriteLine(string.Join(" ", tuercas));
+                    Console.WriteLine(string.Join(" ", tornillos));
+                    okay = true;
+                }
+                else
+                {
+                    Console.WriteLine("Introduzca un numero valido");
+                    Console.WriteLine();
+                }
+
+            } while (!okay);
+
+
+
+            #region Metodos
+            // Metodos
+
+            char[] MakeSureCharArrIsEqual(char[] tuercas)
+            {
+                int len = tuercas.Length;
+                HashSet<char> hash = new HashSet<char>();
+                char[] tornillos = new char[len];
+
+                for (int i = 0; i < len; i++)
+                {
+                    hash.Add(tuercas[i]);
+                }
+
+                for (int i = 0; i < len; i++)
+                {
+                    Console.Write($"Inserte el caracter {i + 1}: ");
+                    bool isChar = char.TryParse(Console.ReadLine(), out char val);
+
+                    if (isChar && hash.Contains(val))
+                    {
+                        tornillos[i] = val;
+                    }                  
+                    else
+                    {
+                        Console.WriteLine("Tuercas deben compararse con tornillos");
+                        i--;
+                    }
+                }
+                return tornillos;
+            }
+
+            char[] CreateCharArr(int size)
+            {
+                if (size > 0)
+                {
+                    char[] array = new char[size];
+
+
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        Console.Write($"Inserte el caracter {i + 1}: ");
+                        bool isChar = char.TryParse(Console.ReadLine(), out char val);
+
+                        if (isChar)
+                        {
+                            array[i] = val;
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nIntroduzca un char valido");
+                            i--;
+                        }                       
+                    }
+                    return array;
+                }
+                return null;
+            }
+            #endregion 
+
+            #endregion
+        }
+
+
 
     }
 
