@@ -172,10 +172,10 @@ namespace Tp1
                 if (isNumber && n > 0)
                 {
                     Console.WriteLine("Tuercas: ");
-                    char[] tuercas = GetCharArr(number);
+                    char[] tuercas = GetCharArr(n);
 
                     Console.WriteLine("\nTornillos: ");
-                    char[] tornillos = GetCharArr(number);
+                    char[] tornillos = MakeSureCharArrIsEqual(tuercas);
 
 
                     TP12 matching = new TP12();
@@ -197,19 +197,20 @@ namespace Tp1
                     Console.WriteLine("Introduzca un numero valido");
                     Console.WriteLine();
                 }
-            }while (!okay);
+
+            } while (!okay);
 
 
 
             #region Metodos
             // Metodos
-            char[] GetCharArr(string x)
+            char[] GetCharArr(int x)
             {
                 bool isRight = false;
                 do
                 {
 
-                    int n = int.Parse(x);
+                    int n = x;
                     char[] array = CreateCharArr(n);
                     isRight = true;
                     return array;
@@ -217,6 +218,35 @@ namespace Tp1
 
                 } while (!isRight);
 
+            }
+
+            char[] MakeSureCharArrIsEqual(char[] tuercas)
+            {
+                int len = tuercas.Length;
+                HashSet<char> hash = new HashSet<char>();
+                char[] tornillos = new char[len];
+
+                for (int i = 0; i < len; i++)
+                {
+                    hash.Add(tuercas[i]);
+                }
+
+                for (int i = 0; i < len; i++)
+                {
+                    Console.Write($"Inserte el caracter {i + 1}: ");
+                    bool isChar = char.TryParse(Console.ReadLine(), out char val);
+
+                    if (isChar && hash.Contains(val))
+                    {
+                        tornillos[i] = val;
+                    }                  
+                    else
+                    {
+                        Console.WriteLine("Tuercas deben compararse con tornillos");
+                        i--;
+                    }
+                }
+                return tornillos;
             }
 
             char[] CreateCharArr(int size)

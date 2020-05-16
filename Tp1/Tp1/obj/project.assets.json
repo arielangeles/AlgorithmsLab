@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\kelvi\\.nuget\\packages\\": {}
+    "C:\\Users\\ariel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
+      "projectUniqueName": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
       "projectName": "Tp1",
-      "projectPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
-      "packagesPath": "C:\\Users\\kelvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kelvi\\Source\\Repos\\AlgorithmsLab\\Tp1\\Tp1\\obj\\",
+      "projectPath": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\Tp1.csproj",
+      "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ariel\\Documents\\LabAlgorithms\\AlgorithmsLab\\Tp1\\Tp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kelvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
