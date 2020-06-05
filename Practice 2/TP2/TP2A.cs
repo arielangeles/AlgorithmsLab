@@ -22,6 +22,11 @@ namespace TP2
                 limitsOfMinDifference[0] = -1;
                 return limitsOfMinDifference;
             }
+            else
+            {
+                limitsOfMinDifference[0] = a[0];
+                limitsOfMinDifference[1] = a[1];
+            }
 
             minDifference = Math.Abs(a[0] - a[1]);
             for (int i = 1; i < a.Length - 1; i++)
