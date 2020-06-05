@@ -38,6 +38,8 @@ namespace TP2
                             Console.WriteLine("\nThe Pair of numbers with the minimum difference is: ");
                             Console.WriteLine(string.Join(" - ", lista));
                         }
+
+                        Console.ReadLine();
                         break;
                     #endregion
 
