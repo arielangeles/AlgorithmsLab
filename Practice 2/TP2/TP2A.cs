@@ -14,7 +14,7 @@ namespace TP2
             a = merge.Sort(a);
 
             int minDifference = 0; //Temp var that contains the min difference
-            int[] limitsOfMinDifference = new int[2];      /* This array stores the limits in the form [a[i], a[i+1]]
+            int[] limitsOfMinDifference = {a[0], a[1] };      /* This array stores the limits in the form [a[i], a[i+1]]
                                                              to know which set of values give the Min difference*/
 
             if (a.Length < 2)
