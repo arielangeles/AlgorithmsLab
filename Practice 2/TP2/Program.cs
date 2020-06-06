@@ -17,72 +17,84 @@ namespace TP2
                 Console.WriteLine("2. [TP2B] Find pair such that sum of pairs = x func");
                 Console.WriteLine("3. Exit");
                 Console.Write("\nAnswer: ");
-                int option = int.Parse(Console.ReadLine());
-
-                switch(option)
+                bool IsInt = int.TryParse(Console.ReadLine(), out int option);
+                //int option = int.Parse(Console.ReadLine());
+                if (IsInt)
                 {
-                    #region Minimum Difference between array's values
-                    case 1:
+                    switch (option)
+                    {
+                        #region Minimum Difference between array's values
+                        case 1:
 
-                        TP2A tp2a = new TP2A();
+                            TP2A tp2a = new TP2A();
 
-                        Console.Clear();
-                        int[] array1 = createArray();
-                        Console.WriteLine($"\nArray: [{string.Join(", ", array1)}]");
+                            Console.Clear();
+                            int[] array1 = CreateArray();
+                            Console.WriteLine($"\nArray: [{string.Join(", ", array1)}]");
 
-                        int[] lista = tp2a.FindMinDifference(array1);
+                            int[] lista = tp2a.FindMinDifference(array1);
 
-                        if (lista[0] == -1) Console.WriteLine(lista[0]);
-                        else
-                        {
-                            Console.WriteLine("\nThe Pair of numbers with the minimum difference is: ");
-                            Console.WriteLine(string.Join(" - ", lista));
-                        }
+                            if (lista[0] == -1) Console.WriteLine(lista[0]);
+                            else
+                            {
+                                Console.WriteLine("\nThe Pair of numbers with the minimum difference is: ");
+                                Console.WriteLine(string.Join(" - ", lista));
+                            }
 
-                        Console.ReadLine();
-                        break;
-                    #endregion
+                            Console.ReadLine();
+                            break;
+                        #endregion
 
-                    #region Find pair such that pairSum = x func
-                    case 2:
+                        #region Find pair such that pairSum = x func
+                        case 2:
 
-                        TP2B tp2b = new TP2B();
+                            TP2B tp2b = new TP2B();
 
-                        Console.Clear();
-                        int[] array2 = createArray();
-                        Console.WriteLine($"\nArray: [{string.Join(", ", array2)}]");
-                        
-                        Console.Write("\nPlease enter the x function: ");
-                        int x = int.Parse(Console.ReadLine());
-                        int[] foundPair = tp2b.FindPair(array2, x);
+                            Console.Clear();
+                            int[] array2 = CreateArray();
+                            Console.WriteLine($"\nArray: [{string.Join(", ", array2)}]");
+
+                            Console.Write("\nPlease enter the x function: ");
+                            int x = int.Parse(Console.ReadLine());
+                            int[] foundPair = tp2b.FindPair(array2, x);
 
 
-                        if (!TP2B.found) Console.WriteLine(-1);
-                        else Console.WriteLine($"\nx={x}\n[{string.Join(", ", foundPair)}]");
+                            if (!TP2B.found) Console.WriteLine(-1);
+                            else Console.WriteLine($"\nX={x}\n[{string.Join(", ", foundPair)}]");
 
-                        Console.ReadLine();
+                            Console.ReadLine();
 
-                        break;
-                    #endregion
+                            break;
+                        #endregion
 
-                    case 3:
-                        finished = false;
-                        break;
+                        case 3:
+                            //finished = false;
+                            Environment.Exit(3);
+                            break;
 
-                    default:
-                        break;
+                        default:
+                            Console.WriteLine("Invalid number");
+                            Console.ReadKey();
+                            break;
+                    }
+                    finished = true;
+                }
+                else
+                {
+                    Console.WriteLine("Insert a valid character");
+                    Console.ReadKey();
                 }
             }
 
 
         }
 
-        public static int[] createArray()
+        public static int[] CreateArray()
         {
             bool finish = false;
             do
             {
-                Console.Write("Please enter the size of the Array: ");
+                Console.Write("\nPlease enter the size of the Array: ");
                 bool isInt = int.TryParse(Console.ReadLine(), out int size);
 
                 if (isInt)
