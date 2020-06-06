@@ -14,7 +14,7 @@ namespace TP2
                 Console.WriteLine("Trabajo Práctico 2 [TP2]");
                 Console.WriteLine("\nElige el ejercicio a ejecutar: ");
                 Console.WriteLine("1. [TP2A] Minimum Difference between array's values");
-                Console.WriteLine("2. [TP2B] Find pair such that pairSum = x func");
+                Console.WriteLine("2. [TP2B] Find pair such that sum of pairs = x func");
                 Console.WriteLine("3. Exit");
                 Console.Write("\nAnswer: ");
                 int option = int.Parse(Console.ReadLine());
@@ -57,7 +57,7 @@ namespace TP2
                         int[] foundPair = tp2b.FindPair(array2, x);
 
 
-                        if (foundPair[0] == int.MaxValue && foundPair[1] == int.MinValue) Console.WriteLine(-1);
+                        if (!TP2B.found) Console.WriteLine(-1);
                         else Console.WriteLine($"\nx={x}\n[{string.Join(", ", foundPair)}]");
 
                         Console.ReadLine();
@@ -79,20 +79,39 @@ namespace TP2
 
         public static int[] createArray()
         {
-            Console.Write("Please enter the size of the Array: ");
-            int size = int.Parse(Console.ReadLine());
-
-            int[] nArray = new int[size];
-
-            Console.WriteLine("\nPlease enter the value for eahc index: ");
-            for (int i = 0; i < nArray.Length; i++)
+            bool finish = false;
+            do
             {
-                Console.Write($"Position {i + 1} = ");
-                int value = int.Parse(Console.ReadLine());
-                nArray[i] = value;
-            }
+                Console.Write("Please enter the size of the Array: ");
+                bool isInt = int.TryParse(Console.ReadLine(), out int size);
 
-            return nArray;
+                if (isInt)
+                {
+                    int[] nArray = new int[size];
+
+                    Console.WriteLine("\nPlease enter the value for each index: ");
+                    for (int i = 0; i < nArray.Length; i++)
+                    {
+                        Console.Write($"Position {i + 1} = ");
+                        bool isValid = int.TryParse(Console.ReadLine(), out int val);
+
+                        if (isValid) nArray[i] = val;
+                        else
+                        {
+                            Console.WriteLine("Insert a valid number");
+                            i--;
+                        }
+                    }
+                    return nArray;
+                }
+                else
+                {
+                    Console.WriteLine("Insert a valid character");
+                }
+
+            } while (!finish);
+
+            return null;           
         }
 
     }

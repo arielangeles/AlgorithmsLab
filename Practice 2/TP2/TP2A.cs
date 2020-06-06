@@ -22,11 +22,9 @@ namespace TP2
                 limitsOfMinDifference[0] = -1;
                 return limitsOfMinDifference;
             }
-            else
-            {
-                limitsOfMinDifference[0] = a[0];
-                limitsOfMinDifference[1] = a[1];
-            }
+
+            limitsOfMinDifference[0] = a[0];
+            limitsOfMinDifference[1] = a[1];
 
             minDifference = Math.Abs(a[0] - a[1]);
             for (int i = 1; i < a.Length - 1; i++)
@@ -39,14 +37,15 @@ namespace TP2
                     limitsOfMinDifference[1] = a[i + 1];
                 }
             }
-                
+
             return limitsOfMinDifference;
 
             /* HashTable Way */
 
             //Hashtable hashtable = new Hashtable(a.Length);
             //int[] result = new int[2];
-            //for (int i = 0; i < a.Length - 1; i++) hashtable.Add(Convert.ToString(i), Convert.ToString(Math.Abs(a[i] - a[i + 1])));
+            //for (int i = 0; i < a.Length - 1; i++) 
+            //    hashtable.Add(Convert.ToString(i), Convert.ToString(Math.Abs(a[i] - a[i + 1])));
 
             //Item it = new Item();
             //it = hashtable["0"];
@@ -54,10 +53,10 @@ namespace TP2
             //for (int i = 1; i < a.Length - 1; i++)
             //{
             //    it = hashtable[Convert.ToString(i)];
-            //    if(int.Parse(it.Value) < minVal) minVal = int.Parse(it.Value);        
+            //    if (int.Parse(it.Value) < minVal) minVal = int.Parse(it.Value);
             //}
 
-            //for (int i = 0; i < a.Length  - 1; i++)
+            //for (int i = 0; i < a.Length - 1; i++)
             //{
             //    it = hashtable[Convert.ToString(i)];
             //    if (minVal == int.Parse(it.Value))

@@ -6,6 +6,7 @@ namespace TP2
 {
     public class TP2B
     {
+        public static bool found = false;
         
         public int[] FindPair(int[] arr, int x)
         {
@@ -15,11 +16,11 @@ namespace TP2
             int[] res = new int[2];
        
             int low = 0, high = a.Length - 1;
-            bool found = false;
+            int pairSum = 0;
             for (int i = 0; i < a.Length; i++)
             {
-                int pairSum = a[low] + a[high];
-
+                if (low < high) pairSum = a[low] + a[high];
+                
                 if (pairSum == x)
                 {
                     res[0] = a[low];
@@ -29,13 +30,6 @@ namespace TP2
                 else if (pairSum > x) high--;
                 else low++; //(pairSum < x) 
             }
-
-            if (!found)
-            {
-                res[0] = int.MaxValue;
-                res[1] = int.MinValue;
-            } 
-                
             
             return res;
         }
