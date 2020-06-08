@@ -107,7 +107,7 @@ namespace TP2
                         Console.Write($"Position {i + 1} = ");
                         bool isValid = int.TryParse(Console.ReadLine(), out int val);
 
-                        if (isValid) nArray[i] = val;
+                        if (isValid && val > 1) nArray[i] = val;
                         else
                         {
                             Console.WriteLine("Insert a valid number");
