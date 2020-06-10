@@ -40,34 +40,37 @@ namespace TP2
 
             return limitsOfMinDifference;
 
+            #region Hashtable Way
             /* HashTable Way */
 
-            //Hashtable hashtable = new Hashtable(a.Length);
-            //int[] result = new int[2];
-            //for (int i = 0; i < a.Length - 1; i++) 
-            //    hashtable.Add(Convert.ToString(i), Convert.ToString(Math.Abs(a[i] - a[i + 1])));
+            /*
+            Hashtable hashtable = new Hashtable(a.Length);
+            int[] result = new int[2];
+            for (int i = 0; i < a.Length - 1; i++)
+                hashtable.Add(Convert.ToString(i), Convert.ToString(Math.Abs(a[i] - a[i + 1])));
 
-            //Item it = new Item();
-            //it = hashtable["0"];
-            //int minVal = int.Parse(it.Value);
-            //for (int i = 1; i < a.Length - 1; i++)
-            //{
-            //    it = hashtable[Convert.ToString(i)];
-            //    if (int.Parse(it.Value) < minVal) minVal = int.Parse(it.Value);
-            //}
+            Item it = new Item();
+            it = hashtable["0"];
+            int minVal = int.Parse(it.Value);
+            for (int i = 1; i < a.Length - 1; i++)
+            {
+                it = hashtable[Convert.ToString(i)];
+                if (int.Parse(it.Value) < minVal) minVal = int.Parse(it.Value);
+            }
 
-            //for (int i = 0; i < a.Length - 1; i++)
-            //{
-            //    it = hashtable[Convert.ToString(i)];
-            //    if (minVal == int.Parse(it.Value))
-            //    {
-            //        result[0] = a[i];
-            //        result[1] = a[i + 1];
-            //    }
-            //}
+            for (int i = 0; i < a.Length - 1; i++)
+            {
+                it = hashtable[Convert.ToString(i)];
+                if (minVal == int.Parse(it.Value))
+                {
+                    result[0] = a[i];
+                    result[1] = a[i + 1];
+                }
+            }
 
-            //return result;
-
+            return result;
+            */
+            #endregion
         }
 
     } 
