@@ -11,10 +11,10 @@ namespace TP3
             LinkedListNode<int> listNode1 = AddLinkedList();
             LinkedListNode<int> listNode2 = AddLinkedList();
 
-            Console.WriteLine("LinkedList1:");
+            Console.WriteLine("LinkedList1: ");
             PrintLinkedList(listNode1);
 
-            Console.WriteLine("\nLinkedList2");
+            Console.WriteLine("\nLinkedList2: ");
             PrintLinkedList(listNode2);
 
             LinkedListNode<int> mergedList = TP3B.MergeLinkedList(listNode1, listNode2);
