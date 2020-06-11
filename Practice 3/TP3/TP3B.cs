@@ -10,7 +10,6 @@ namespace TP3
         public static LinkedListNode<int> MergeLinkedList(LinkedListNode<int> linkedList1, LinkedListNode<int> linkedList2)
         {
             LinkedList<int> result = new LinkedList<int>();
-            //LinkedListNode<int> headNode = result.First;
 
             while (linkedList1 != null && linkedList2 != null)
             {
