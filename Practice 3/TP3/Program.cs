@@ -28,7 +28,7 @@ namespace TP3
                         #region TP3A
                         case 1:
                             Console.Clear();
-                            LinkedListNode<int> listNode = AddLinkedList(1);
+                            LinkedListNode<int> listNode = AddLinkedList(1, 1);
 
                             Console.WriteLine("\nLinkedList: ");
                             PrintLinkedList(listNode);
@@ -44,10 +44,11 @@ namespace TP3
                         #region TP3B
                         case 2:
                             Console.Clear();
-                            LinkedListNode<int> listNode1 = AddLinkedList(1);
+                            LinkedListNode<int> listNode1 = AddLinkedList(1,2);
                             Console.WriteLine("---------------------------------------------");
-                            LinkedListNode<int> listNode2 = AddLinkedList(2);
+                            LinkedListNode<int> listNode2 = AddLinkedList(2, 2);
                             Console.WriteLine("---------------------------------------------");
+
                             Console.WriteLine("\nLinkedList1: ");
                             PrintLinkedList(listNode1);
 
@@ -58,7 +59,7 @@ namespace TP3
 
                             Console.WriteLine("\n\nMerged Linked List:");
                             PrintLinkedList(mergedList);
-                            Console.WriteLine("");
+                            Console.WriteLine();
                             Console.ReadLine();
                             break;
                         #endregion
@@ -99,7 +100,7 @@ namespace TP3
             }            
         }
 
-        public static LinkedListNode<int> AddLinkedList(int nLinkedList)
+        public static LinkedListNode<int> AddLinkedList(int nLinkedList, int nProblem)
         {
             LinkedList<int> ls = new LinkedList<int>();
             bool finished = false;
@@ -109,6 +110,7 @@ namespace TP3
                 Console.Write("\nInsert the length of the linked list: ");
                 bool isInt = int.TryParse(Console.ReadLine(), out int n);
 
+                int y = 0;
                 if (isInt)
                 {
                     for (int i = 0; i < n; i++)
@@ -118,7 +120,17 @@ namespace TP3
 
                         if (isVal)
                         {
-                            ls.AddLast(val);
+                            if(nProblem == 1 || nProblem == 2 && val >= y)
+                            {
+                                ls.AddLast(val);
+                                y = val;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Enter a number higher or equal than {y}");
+                                i--;
+                            }
+
                         }
                         else
                         {
@@ -132,6 +144,8 @@ namespace TP3
                 else
                 {
                     Console.WriteLine("Insert a valid character");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
 
                             
