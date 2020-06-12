@@ -30,7 +30,6 @@ namespace TP3
                             Console.Clear();
                             LinkedListNode<int> listNode = AddLinkedList(1);
 
-
                             Console.WriteLine("\nLinkedList: ");
                             PrintLinkedList(listNode);
 
@@ -89,16 +88,14 @@ namespace TP3
         {
             while(ls != null)
             {
-                if(ls.Next != null) 
-                { 
+                if (ls.Next != null)
+                {
                     Console.Write(ls.Value + " -> ");
                     ls = ls.Next;
                 }
-                else if(ls.Next == null)
-                {
-                    Console.Write(ls.Value);
-                    ls = ls.Next;
-                }
+
+                Console.Write(ls.Value);
+                ls = ls.Next;             
             }            
         }
 
@@ -108,7 +105,7 @@ namespace TP3
             bool finished = false;
             while (!finished)
             {
-                Console.WriteLine($"\nLinkedList {nLinkedList}");
+                Console.WriteLine($"\nLinkedList {nLinkedList}:");
                 Console.Write("\nInsert the length of the linked list: ");
                 bool isInt = int.TryParse(Console.ReadLine(), out int n);
 
@@ -134,7 +131,7 @@ namespace TP3
                 }
                 else
                 {
-                    Console.WriteLine("Insert a valid number");
+                    Console.WriteLine("Insert a valid character");
                 }
 
                             
