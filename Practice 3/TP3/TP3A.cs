@@ -6,7 +6,7 @@ namespace TP3
 {
     class TP3A
     {
-        public static LinkedListNode<int> reverseTheOrder(LinkedListNode<int> linkedList)
+        public static LinkedListNode<int> ReverseLinkedList(LinkedListNode<int> linkedList)
         {
             LinkedList<int> reversedLinkedList = new LinkedList<int>();
             Stack<int> stack = new Stack<int>();

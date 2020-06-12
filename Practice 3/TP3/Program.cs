@@ -15,7 +15,7 @@ namespace TP3
                 Console.WriteLine("Trabajo Práctico 3 [TP3]");
                 Console.WriteLine("\nElige el ejercicio a ejecutar: ");
                 Console.WriteLine("1. [TP3A] Reverse the order of a Linked List");
-                Console.WriteLine("2. [TP3B] Sort two Linked List into one");
+                Console.WriteLine("2. [TP3B] Merge two Linked List into one");
                 Console.WriteLine("3. Exit");
                 Console.Write("\nAnswer: ");
                 bool IsInt = int.TryParse(Console.ReadLine(), out int option);
@@ -33,7 +33,7 @@ namespace TP3
                             Console.WriteLine("\nLinkedList: ");
                             PrintLinkedList(listNode);
 
-                            LinkedListNode<int> reversedLinkedList = TP3A.reverseTheOrder(listNode);
+                            LinkedListNode<int> reversedLinkedList = TP3A.ReverseLinkedList(listNode);
 
                             Console.WriteLine("\n\nReversed Linked List:");
                             PrintLinkedList(reversedLinkedList);
