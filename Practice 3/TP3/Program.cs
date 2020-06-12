@@ -7,9 +7,11 @@ namespace TP3
     {
         static void Main(string[] args)
         {
+
             #region TP3B
-            LinkedListNode<int> listNode1 = AddLinkedList();
-            LinkedListNode<int> listNode2 = AddLinkedList();
+            LinkedListNode<int> listNode1 = AddLinkedList(1);
+            Console.WriteLine("---------------------------------------------");
+            LinkedListNode<int> listNode2 = AddLinkedList(2);
 
             Console.WriteLine("LinkedList1: ");
             PrintLinkedList(listNode1);
@@ -30,18 +32,27 @@ namespace TP3
         {
             while(ls != null)
             {
-                Console.Write(ls.Value + " -> ");
-                ls = ls.Next;
+                if(ls.Next != null) 
+                { 
+                    Console.Write(ls.Value + " -> ");
+                    ls = ls.Next;
+                }
+                else if(ls.Next == null)
+                {
+                    Console.Write(ls.Value);
+                    ls = ls.Next;
+                }
             }            
         }
 
-        public static LinkedListNode<int> AddLinkedList()
+        public static LinkedListNode<int> AddLinkedList(int nLinkedList)
         {
             LinkedList<int> ls = new LinkedList<int>();
             bool finished = false;
             while (!finished)
             {
-                Console.WriteLine("Insert the length of the linked list: ");
+                Console.WriteLine($"\nLinkedList {nLinkedList}");
+                Console.Write("\nInsert the length of the linked list: ");
                 bool isInt = int.TryParse(Console.ReadLine(), out int n);
 
                 if (isInt)
