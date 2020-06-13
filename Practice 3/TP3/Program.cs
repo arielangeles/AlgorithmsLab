@@ -89,14 +89,8 @@ namespace TP3
         {
             while(ls != null)
             {
-                if (ls.Next != null)
-                {
-                    Console.Write(ls.Value + " -> ");
-                }
-                else
-                {
-                    Console.Write(ls.Value);
-                }
+                if (ls.Next != null) Console.Write(ls.Value + " -> ");               
+                else Console.Write(ls.Value);                  
                 ls = ls.Next;             
             }            
         }
