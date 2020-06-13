@@ -9,6 +9,198 @@ namespace UnitTestPractice3
     public class TP3BTests
     {
         [TestMethod]
+        public void reverseLL_BaseCase()
+        {
+            int[] vals = { 1, 2, 3, 4, 5 };
+            int[] valsReversed = { 5, 4, 3, 2, 1 };
+
+            LinkedList<int> ls = new LinkedList<int>(vals);
+
+            LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
+
+            int i = 0;
+            bool isReversed = true;
+            while (nodeReversed.Next != null)
+            {
+                if (nodeReversed.Value != valsReversed[i])
+                {
+                    isReversed = false;
+                }
+                i++;
+                nodeReversed = nodeReversed.Next;
+            }
+
+            Assert.IsTrue(isReversed);
+        }
+
+        [TestMethod]
+        public void reverseLL_AllElementsEqualsExceptLastOne()
+        {
+            int[] vals = { 1, 1, 1, 1, 2 };
+            int[] valsReversed = { 2, 1, 1, 1, 1 };
+
+            LinkedList<int> ls = new LinkedList<int>(vals);
+
+            LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
+
+            int i = 0;
+            bool isReversed = true;
+            while (nodeReversed.Next != null)
+            {
+                if (nodeReversed.Value != valsReversed[i])
+                {
+                    isReversed = false;
+                }
+                i++;
+                nodeReversed = nodeReversed.Next;
+            }
+
+            Assert.IsTrue(isReversed);
+        }
+
+
+        [TestMethod]
+        public void reverseLL_AllElementsEqualsExceptFirstOne()
+        {
+            int[] vals = { 2, 1, 1, 1, 1 };
+            int[] valsReversed = { 1, 1, 1, 1, 2 };
+
+            LinkedList<int> ls = new LinkedList<int>(vals);
+
+            LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
+
+            int i = 0;
+            bool isReversed = true;
+            while (nodeReversed.Next != null)
+            {
+                if (nodeReversed.Value != valsReversed[i])
+                {
+                    isReversed = false;
+                }
+                i++;
+                nodeReversed = nodeReversed.Next;
+            }
+
+            Assert.IsTrue(isReversed);
+        }
+
+        [TestMethod]
+        public void reverseLL_AlternateElements()
+        {
+            int[] vals = { 1, 2, 1, 2, 1, 2 };
+            int[] valsReversed = { 2, 1, 2, 1, 2, 1 };
+
+            LinkedList<int> ls = new LinkedList<int>(vals);
+
+            LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
+
+            int i = 0;
+            bool isReversed = true;
+            while (nodeReversed.Next != null)
+            {
+                if (nodeReversed.Value != valsReversed[i])
+                {
+                    isReversed = false;
+                }
+                i++;
+                nodeReversed = nodeReversed.Next;
+            }
+
+            Assert.IsTrue(isReversed);
+        }
+
+        [TestMethod]
+        //[ExpectedException(typeof(NullReferenceException))]
+        public void reverseLL_EmptyList()
+        {
+            int[] vals = {  };
+
+            LinkedList<int> ls = new LinkedList<int>(vals);
+            LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
+            Assert.IsTrue(nodeReversed == null);
+        }
+
+        [TestMethod]
+        public void MergeLLs_BaseCase()
+        {
+            int[] vals1 = { 1, 2, 3, 4, 5 };
+            int[] vals2 = { 6, 7, 8, 9, 10 };
+            int[] valsExpected = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            LinkedList<int> ls1 = new LinkedList<int>(vals1);
+            LinkedList<int> ls2 = new LinkedList<int>(vals2);
+
+            LinkedListNode<int> firstNodeMergedLL = TP3B.MergeLinkedList(ls1.First, ls2.First);
+
+            int i = 0;
+            bool isMerged = true;
+            while (firstNodeMergedLL.Next != null)
+            {
+                if (firstNodeMergedLL.Value != valsExpected[i])
+                {
+                    isMerged = false;
+                }
+                i++;
+                firstNodeMergedLL = firstNodeMergedLL.Next;
+            }
+
+            Assert.IsTrue(isMerged);
+        }
+
+        [TestMethod]
+        public void MergeLLs_FirstLLEmpty()
+        {
+            int[] vals1 = { 1, 2, 3, 4, 5 };
+            int[] vals2 = {  };
+            int[] valsExpected = { 1, 2, 3, 4, 5};
+
+            LinkedList<int> ls1 = new LinkedList<int>(vals1);
+            LinkedList<int> ls2 = new LinkedList<int>(vals2);
+
+            LinkedListNode<int> firstNodeMergedLL = TP3B.MergeLinkedList(ls1.First, ls2.First);
+
+            int i = 0;
+            bool isMerged = true;
+            while (firstNodeMergedLL.Next != null)
+            {
+                if (firstNodeMergedLL.Value != valsExpected[i])
+                {
+                    isMerged = false;
+                }
+                i++;
+                firstNodeMergedLL = firstNodeMergedLL.Next;
+            }
+
+            Assert.IsTrue(isMerged);
+        }
+        [TestMethod]
+        public void MergeLLs_SecondLLEmpty()
+        {
+            int[] vals1 = {  };
+            int[] vals2 = { 6, 7, 8, 9, 10 };
+            int[] valsExpected = { 6, 7, 8, 9, 10 };
+
+            LinkedList<int> ls1 = new LinkedList<int>(vals1);
+            LinkedList<int> ls2 = new LinkedList<int>(vals2);
+
+            LinkedListNode<int> firstNodeMergedLL = TP3B.MergeLinkedList(ls1.First, ls2.First);
+
+            int i = 0;
+            bool isMerged = true;
+            while (firstNodeMergedLL.Next != null)
+            {
+                if (firstNodeMergedLL.Value != valsExpected[i])
+                {
+                    isMerged = false;
+                }
+                i++;
+                firstNodeMergedLL = firstNodeMergedLL.Next;
+            }
+
+            Assert.IsTrue(isMerged);
+        }
+
+        [TestMethod]
         public void MergeLinkedListTest()
         {
             LinkedList<int> ls1 = new LinkedList<int>();
@@ -20,7 +212,7 @@ namespace UnitTestPractice3
 
             int y = int.MinValue;
             for (int i = 0; i < length1; i++)
-            {   
+            {
                 int val = random.Next(-10, 10);
                 if (val >= y)
                 {
@@ -50,7 +242,7 @@ namespace UnitTestPractice3
             LinkedListNode<int> mergedList2 = MergeLists(list1, list2);
 
             Assert.AreEqual(mergedList1, mergedList2, "Ok gracias");
-            
+
         }
 
         public static LinkedListNode<int> MergeLists(LinkedListNode<int> ls1, LinkedListNode<int> ls2)
