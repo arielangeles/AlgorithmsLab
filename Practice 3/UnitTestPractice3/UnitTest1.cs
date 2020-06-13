@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TP3;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using TP3;
 
 namespace UnitTestPractice3
 {
@@ -113,7 +113,7 @@ namespace UnitTestPractice3
         //[ExpectedException(typeof(NullReferenceException))]
         public void reverseLL_EmptyList()
         {
-            int[] vals = {  };
+            int[] vals = { };
 
             LinkedList<int> ls = new LinkedList<int>(vals);
             LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
@@ -151,8 +151,8 @@ namespace UnitTestPractice3
         public void MergeLLs_FirstLLEmpty()
         {
             int[] vals1 = { 1, 2, 3, 4, 5 };
-            int[] vals2 = {  };
-            int[] valsExpected = { 1, 2, 3, 4, 5};
+            int[] vals2 = { };
+            int[] valsExpected = { 1, 2, 3, 4, 5 };
 
             LinkedList<int> ls1 = new LinkedList<int>(vals1);
             LinkedList<int> ls2 = new LinkedList<int>(vals2);
@@ -176,7 +176,7 @@ namespace UnitTestPractice3
         [TestMethod]
         public void MergeLLs_SecondLLEmpty()
         {
-            int[] vals1 = {  };
+            int[] vals1 = { };
             int[] vals2 = { 6, 7, 8, 9, 10 };
             int[] valsExpected = { 6, 7, 8, 9, 10 };
 
@@ -203,20 +203,21 @@ namespace UnitTestPractice3
         [TestMethod]
         public void MergeLinkedListTest()
         {
-            LinkedList<int> ls1 = new LinkedList<int>();
-            LinkedList<int> ls2 = new LinkedList<int>();
             var random = new Random();
 
-            int length1 = random.Next(10);
-            int length2 = random.Next(10);
+            int length1 = random.Next(5);
+            int length2 = random.Next(5);
+
+            int[] list1 = new int[length1];
+            int[] list2 = new int[length2];
 
             int y = int.MinValue;
             for (int i = 0; i < length1; i++)
             {
-                int val = random.Next(-10, 10);
+                int val = random.Next(0, 10);
                 if (val >= y)
                 {
-                    ls1.AddLast(val);
+                    list1[i] = val;
                     y = val;
                 }
                 else i--;
@@ -225,43 +226,37 @@ namespace UnitTestPractice3
             y = int.MinValue;
             for (int i = 0; i < length2; i++)
             {
-                int val = random.Next(-10, 10);
+                int val = random.Next(0, 10);
                 if (val >= y)
                 {
-                    ls2.AddLast(val);
+                    list2[i] = val;
                     y = val;
                 }
                 else i--;
             }
 
-            LinkedListNode<int> list1 = ls1.First;
-            LinkedListNode<int> list2 = ls2.First;
+            LinkedList<int> ls1 = new LinkedList<int>(list1);
+            LinkedList<int> ls2 = new LinkedList<int>(list2);
 
-            LinkedListNode<int> mergedList1 = TP3B.MergeLinkedList(list1, list2);
+            
+            bool areEqual = true;
 
-            LinkedListNode<int> mergedList2 = MergeLists(list1, list2);
+            int[] resultArr = Merge(list1, list2);
+            LinkedListNode<int> mergedList = TP3B.MergeLinkedList(ls1.First, ls2.First);
 
-            Assert.AreEqual(mergedList1, mergedList2, "Ok gracias");
-
-        }
-
-        public static LinkedListNode<int> MergeLists(LinkedListNode<int> ls1, LinkedListNode<int> ls2)
-        {
-            LinkedList<int> result = new LinkedList<int>();
-
-            int[] arr1 = ConvertFromLinkedListToArray(ls1.List);
-            int[] arr2 = ConvertFromLinkedListToArray(ls2.List);
-
-            int[] resultArr = Merge(arr1, arr2);
-
-            for (int i = 0; i < resultArr.Length; i++)
+            int j = 0;
+            while(mergedList != null)
             {
-                result.AddLast(resultArr[i]);
+                if (resultArr[j] != mergedList.Value) areEqual = false;
+                j++;
+                mergedList = mergedList.Next;
             }
+          
+            Assert.IsTrue(areEqual);
 
-            return result.First;
         }
-        public static int[] Merge(int[] arr1, int[] arr2)
+
+        public int[] Merge(int[] arr1, int[] arr2)
         {
             int totalLength = arr1.Length + arr2.Length;
             int[] result = new int[totalLength];
@@ -299,17 +294,6 @@ namespace UnitTestPractice3
             return result;
         }
 
-        public static int[] ConvertFromLinkedListToArray(LinkedList<int> ls)
-        {
-            int[] arr1 = new int[ls.Count];
-            LinkedListNode<int> lsn = ls.First;
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                arr1[i] = lsn.Value;
-                lsn = lsn.Next;
-            }
-            return arr1;
-        }
     }
 
 }
