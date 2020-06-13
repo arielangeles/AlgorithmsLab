@@ -117,7 +117,7 @@ namespace UnitTestPractice3
 
             LinkedList<int> ls = new LinkedList<int>(vals);
             LinkedListNode<int> nodeReversed = TP3A.ReverseLinkedList(ls.First);
-            Assert.IsTrue(ls.First == null);
+            Assert.IsTrue(nodeReversed.First == null);
         }
 
         [TestMethod]
