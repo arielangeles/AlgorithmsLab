@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP3
 {
-    class TP3A
+    public class TP3A
     {
         public static LinkedListNode<int> ReverseLinkedList(LinkedListNode<int> linkedList)
         {

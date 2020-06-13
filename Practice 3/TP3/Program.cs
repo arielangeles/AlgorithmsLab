@@ -92,10 +92,11 @@ namespace TP3
                 if (ls.Next != null)
                 {
                     Console.Write(ls.Value + " -> ");
-                    ls = ls.Next;
                 }
-
-                Console.Write(ls.Value);
+                else
+                {
+                    Console.Write(ls.Value);
+                }
                 ls = ls.Next;             
             }            
         }
@@ -146,9 +147,7 @@ namespace TP3
                     Console.WriteLine("Insert a valid character");
                     Console.ReadLine();
                     Console.Clear();
-                }
-
-                            
+                }            
             }
 
             return ls.First;
