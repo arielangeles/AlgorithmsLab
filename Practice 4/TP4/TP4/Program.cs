@@ -7,32 +7,17 @@ namespace TP4
     {
         static void Main(string[] args)
         {
+            TP4A tp4a = new TP4A();
+            TP4B tp4b = new TP4B();
+
             int n = Convert.ToInt32(Console.ReadLine());
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
 
-            int[] result = countingSort(arr);
+            int[] result1 = tp4a.countingSort1(arr);
+            int[] result2 = tp4b.countingSort2(arr);
 
-            Console.WriteLine(string.Join(" ", result));
-        }
-
-        static int[] countingSort(int[] arr)
-        {
-            int[] frequencyArray = new int[100]; // 
-            int[] sorted = new int[arr.Length];
-
-            for (int i = 0; i < arr.Length; i++) frequencyArray[arr[i]]++;
-
-            for (int i = 1; i < frequencyArray.Length; i++) frequencyArray[i] += frequencyArray[i - 1];
-
-            for (int i = arr.Length - 1; i >= 0; i--) 
-            {
-                int c = arr[i];
-                sorted[--frequencyArray[c]] = c;
-            } 
-
-            return sorted;
-
-
+            Console.WriteLine(string.Join(" ", result1));
+            Console.WriteLine(string.Join(" ", result2));
         }
     }
 }
