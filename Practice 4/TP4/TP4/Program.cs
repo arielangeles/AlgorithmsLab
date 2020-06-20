@@ -14,7 +14,7 @@ namespace TP4
                 Console.Clear();
                 Console.WriteLine("Trabajo Práctico 4 [TP4]");
                 Console.WriteLine("\nChoose the exercise to execute: ");
-                Console.WriteLine("1. [TP4A] Find the frequence of each inserted variable");
+                Console.WriteLine("1. [TP4A] Find the frequency of each inserted variable");
                 Console.WriteLine("2. [TP4B] Sort the inserted array");
                 Console.WriteLine("3. Exit");
                 Console.Write("\nAnswer: ");
@@ -23,13 +23,6 @@ namespace TP4
 
                 if (IsInt)
                 {
-                    Console.Clear();
-
-                    Console.Write("Please enter the size of the array: ");
-                    int n = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("\nPlease enter the variables:");
-                    int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
 
                     switch (option)
                     {
@@ -38,8 +31,13 @@ namespace TP4
                             Console.Clear();
 
                             TP4A tp4a = new TP4A();
+                            Console.Write("Please enter the size of the array: ");
+                            int n = Convert.ToInt32(Console.ReadLine());
 
-                            int[] result1 = tp4a.countingSort1(arr);
+                            Console.WriteLine("\nPlease enter the variables:");
+                            int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+
+                            int[] result1 = tp4a.countingSort1(arr1);
 
                             Console.WriteLine("Frequency of each variable: ");
                             Console.WriteLine(string.Join(" ", result1));
@@ -52,8 +50,13 @@ namespace TP4
                             Console.Clear();
 
                             TP4B tp4b = new TP4B();
+                            Console.Write("Please enter the size of the array: ");
+                            int x = Convert.ToInt32(Console.ReadLine());
 
-                            int[] result2 = tp4b.countingSort2(arr);
+                            Console.WriteLine("\nPlease enter the variables:");
+                            int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+
+                            int[] result2 = tp4b.countingSort2(arr2);
 
                             Console.WriteLine("Sorted array: ");
                             Console.WriteLine(string.Join(" ", result2));
