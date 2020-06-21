@@ -35,7 +35,26 @@ namespace TP4
                             int n = Convert.ToInt32(Console.ReadLine());
 
                             Console.WriteLine("\nPlease enter the variables:");
-                            int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                            int[] arr1 = new int[n];
+                            while (true)
+                            {
+                                try
+                                {
+                                    string[] variables = Console.ReadLine().Split(' ');
+                                    if (variables.Length == n)
+                                    {
+                                        arr1 = Array.ConvertAll(variables, arrTemp => Convert.ToInt32(arrTemp));
+                                        break;
+                                    }
+                                }
+                                catch (FormatException e)
+                                {
+                                    Console.WriteLine("Invalid variables");
+                                    Console.WriteLine("\nPlease enter the variables:");
+                                }
+                                Console.WriteLine("Invalid variables");
+                                Console.WriteLine("\nPlease enter the variables:");
+                            }
 
                             int[] result1 = tp4a.countingSort1(arr1);
 
@@ -54,7 +73,26 @@ namespace TP4
                             int x = Convert.ToInt32(Console.ReadLine());
 
                             Console.WriteLine("\nPlease enter the variables:");
-                            int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                            int[] arr2 = new int[x];
+                            while (true)
+                            {
+                                try
+                                {
+                                    string[] variables = Console.ReadLine().Split(' ');
+                                    if (variables.Length == x)
+                                    {
+                                        arr2 = Array.ConvertAll(variables, arrTemp => Convert.ToInt32(arrTemp));
+                                        break;
+                                    }
+                                }
+                                catch (FormatException e)
+                                {
+                                    Console.WriteLine("Invalid variables");
+                                    Console.WriteLine("\nPlease enter the variables:");
+                                }
+                                Console.WriteLine("Invalid variables");
+                                Console.WriteLine("\nPlease enter the variables:");
+                            }
 
                             int[] result2 = tp4b.countingSort2(arr2);
 
