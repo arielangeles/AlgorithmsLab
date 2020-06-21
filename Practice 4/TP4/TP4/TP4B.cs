@@ -8,7 +8,7 @@ namespace TP4
     {
         public int[] countingSort2(int[] arr)
         {
-            int[] frequencyArray = new int[100]; // 
+            int[] frequencyArray = new int[100];
             int[] sorted = new int[arr.Length];
 
             for (int i = 0; i < arr.Length; i++) frequencyArray[arr[i]]++;
