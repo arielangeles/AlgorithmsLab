@@ -6,34 +6,24 @@ namespace TP5
     {
         static void Main(string[] args)
         {
-            int top = 2;
-            Console.WriteLine($"If top is {top} then it has {NumCombinations(top)} combinations");
+            Console.WriteLine("Una rana salta de 1, 2 o 3 pasos para llegar al tope. En cuantas manera diferentes puede llegar al tope.");
+            while (true)
+            {
+                Console.WriteLine();
+                Console.Write("El tope es: ");
+                bool IsInt = int.TryParse(Console.ReadLine(), out int top);
 
-            int top3 = 6;
-            Console.WriteLine($"If top is {top3} then it has {NumCombinations(top3)} combinations");
-
-            int top5 = 7;
-            Console.WriteLine($"If top is {top5} then it has {NumCombinations(top5)} combinations");
-
+                if(IsInt && top >= 0)
+                {
+                    Console.WriteLine($"La rana puede llegar de {NumCombinator.NumCombinations(top)} maneras difernetes");
+                }
+                else{
+                    Console.WriteLine("Digite un entero positvo");
+                }
+            }
         }
 
 
-        public static int NumCombinations(int top)
-        {
-            // Use extra space to keep the calculated results
-            int[] k = new int[top + 1];
 
-            //Declare base cases
-            k[0] = 1;
-            k[1] = 1;
-            k[2] = 2;
-
-            //Calculating the next number of combinations from the base cases using DP
-            for (int i = 3; i < k.Length; i++) 
-                k[i] = k[i - 1] + k[i - 2] + k[i - 3];
-            
-            //Return the "top" element (answer)
-            return k[top];
-        }
     }
 }
